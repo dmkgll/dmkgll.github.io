@@ -1,0 +1,49 @@
+<html>
+  {%- include head.html -%}
+  <body>
+        
+        
+
+<main class="blog" itemscope="" itemtype="http://schema.org/Blog">
+  <a href="/" class="posts-item-brand">deryk's blog</a>
+    
+    <h1 itemprop="name">{{page.title}}</h1>
+    <div class="posts-item-byline">
+            
+            Published on <time datetime="{{page.date}}" itemprop="datePublished">{{page.date}}</time>
+            by <a href="/about/">deryk</a>
+            
+        </div>
+
+    {{ content }}
+
+    
+
+ 
+</main>
+<section class="comments">
+    <p>There are currently no comments. Maybe one day.</p>
+</section>
+    
+<section class="webring">
+      {% if page.previous.url %}
+    <a href="{{page.previous.url}}">← {{page.previous.title}}</a>
+      {% endif %}
+    {% if page.next.url %}
+    
+    <a href="{{page.next.url}}">{{page.next.title}} →</a>
+      {% endif %}
+</section>
+
+    {%- include footer.html -%}
+
+
+  </body>
+
+</html>
+
+        
+        
+    
+
+</body>
